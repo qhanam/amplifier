@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+"""Wrapper script for sandbox_env CLI tool.
+
+This allows running sandbox_env directly from anywhere:
+    tools/sandbox-env list
+    tools/sandbox-env create my-feature /path/to/project
+"""
+import sys
+from pathlib import Path
+
+# Add tools directory to Python path so we can import sandbox_env as a package
+tools_dir = Path(__file__).parent
+sys.path.insert(0, str(tools_dir))
+
+# Import and run the CLI
+from sandbox_env.main import cli
+
+if __name__ == "__main__":
+    cli()

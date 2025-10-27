@@ -46,6 +46,7 @@ logs
 # Working folders
 ai_working/tmp
 .tmp
+workspace/
 
 # Ignore Windows Alternate Data Streams (ADS) files that may appear in WSL
 **/*Zone.Identifier
